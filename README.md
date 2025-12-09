@@ -756,8 +756,22 @@
 
 
             
+          
+           
+           
+           
+           
+           
+           
+           
+           
+           
            <div class="hero-buttons">
     <a href="#contact" class="btn-primary" aria-label="Hubungi Ahmad Alfan Ghoffar">Hubungi Saya</a>
+
+
+
+
     
     <!-- Tombol Unduh CV -->
     <a href="dokumen/CV Ahmad Alfan Ghoffar ITB Ahmad Dahlan Lamongan.pdf" 
