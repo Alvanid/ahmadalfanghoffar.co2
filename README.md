@@ -740,6 +740,10 @@
                 <div class="profile-sphere">
                     <img src="https://z-cdn-media.chatglm.cn/files/b006107e-2989-42c4-9a80-9bb3a0b69979.jpg?auth_key=1865260309-1ed5a895e4f5405fa1efe56080913f6b-0-44e064aad0e6baa0f58a229c8ced7659" alt="Foto profil Ahmad Alfan Ghoffar" class="profile-img">
                 </div>
+           
+            
+            
+            
             </div>
             <h1>Ahmad Alfan Ghoffar</h1>
             <!-- Removed hero-tagline and hero-skills sections -->
