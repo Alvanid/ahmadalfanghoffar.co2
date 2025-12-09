@@ -752,6 +752,10 @@
                 Saya adalah mahasiswa yang berdedikasi dan siap belajar teknologi baru. 
                 Siap berkontribusi melalui pengalaman kerja nyata dalam dunia IT.
             </p>
+
+
+
+            
            <div class="hero-buttons">
     <a href="#contact" class="btn-primary" aria-label="Hubungi Ahmad Alfan Ghoffar">Hubungi Saya</a>
     
