@@ -762,6 +762,9 @@
         </svg>
         Unduh CV
     </a>
+
+
+
 </div>
 
 <!-- Opsional: Tambahkan notifikasi jika unduhan berhasil dimulai -->
