@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="project-detail">
+    <div class="container">
+        <a href="{{ url_for('main.index') }}#work" class="back-link reveal">
+            <i class="bi bi-arrow-left"></i>
+            <span>Back to projects</span>
+        </a>
+        
+        <div class="project-detail-header reveal">
+            <div class="project-detail-meta">
+                <span class="section-tag">Project / 01</span>
+                <div class="project-detail-tags">
+                    <span class="project-tag">{{ project.category }}</span>
+                    <span class="project-status">{{ project.project_status }}</span>
+                </div>
+            </div>
+            <h1 class="project-detail-title">{{ project.title }}</h1>
+            <p class="project-detail-lead">{{ project.short_description }}</p>
+        </div>
+        
+        <div class="project-detail-grid">
+            <div class="project-detail-content reveal">
+                <h3>Overview</h3>
+                <p>{{ project.full_description }}</p>
+                
+                <h3 class="mt-5">Technologies</h3>
+                <div class="tech-stack mt-3">
+                    {% for tech in project.technologies.split(',') %}
+                        <span class="tech-pill">{{ tech.strip() }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            
+            <aside class="project-detail-sidebar reveal" style="transition-delay: 0.15s;">
+                <div class="sidebar-block">
+                    <div class="sidebar-label">Category</div>
+                    <div class="sidebar-value">{{ project.category }}</div>
+                </div>
+                <div class="sidebar-block">
+                    <div class="sidebar-label">Status</div>
+                    <div class="sidebar-value">{{ project.project_status }}</div>
+                </div>
+                <div class="sidebar-block">
+                    <div class="sidebar-label">Role</div>
+                    <div class="sidebar-value">Developer</div>
+                </div>
+                
+                <div class="sidebar-actions">
+                    {% if project.demo_url %}
+                        <a href="{{ project.demo_url }}" target="_blank" class="btn-primary-custom w-100 justify-content-center">
+                            <span>Live Demo</span>
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    {% endif %}
+                    {% if project.repository_url %}
+                        <a href="{{ project.repository_url }}" target="_blank" class="btn-secondary-custom w-100 justify-content-center">
+                            <i class="bi bi-github"></i>
+                            <span>Source Code</span>
+                        </a>
+                    {% endif %}
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+{% endblock %}

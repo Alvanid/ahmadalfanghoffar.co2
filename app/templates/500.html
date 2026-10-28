@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="error-page">
+    <div class="container">
+        <div class="error-content text-center">
+            <div class="error-code">500</div>
+            <h1 class="error-title">Something went <span class="serif-italic">wrong</span></h1>
+            <p class="error-desc">
+                We're experiencing technical difficulties. Please try again later.
+            </p>
+            <a href="{{ url_for('main.index') }}" class="btn-primary-custom mt-4">
+                <span>Back to Home</span>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
