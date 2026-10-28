@@ -1120,6 +1120,48 @@ body {
 }
 
 /* =========================================
+   HERO IMAGE
+   ========================================= */
+.hero-image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.hero-photo {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--surface);
+    box-shadow: var(--shadow-xl);
+    transition: transform 0.4s var(--ease);
+}
+
+.hero-photo:hover {
+    transform: scale(1.03);
+}
+
+.avatar-placeholder {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--bg-alt) 0%, var(--accent-soft) 100%);
+    border: 4px solid var(--surface);
+    box-shadow: var(--shadow-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsif untuk Mobile */
+@media (max-width: 991px) {
+    .hero-photo, .avatar-placeholder {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* =========================================
    RESPONSIVE
    ========================================= */
 @media (max-width: 991px) {

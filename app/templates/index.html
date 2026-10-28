@@ -4,43 +4,63 @@
 <!-- ============ HERO ============ -->
 <section id="home" class="hero">
     <div class="container">
-        <div class="hero-content">
-            <div class="hero-badge reveal">
-                <span class="status-dot"></span>
-                <span>Available for opportunities</span>
-            </div>
-            
-            <h1 class="hero-title reveal">
-                Ahmad Alfan Ghofar,<br>
-                <span class="serif-italic">building</span> digital solutions
-                <span class="text-accent">through technology</span> & design.
-            </h1>
-            
-            <p class="hero-description reveal">
-                Fresh graduate in Information Technology with a passion for software development, 
-                web applications, data processing, and graphic design. Ready to learn, grow, and 
-                contribute in a professional environment.
-            </p>
-            
-            <div class="hero-actions reveal">
-                <a href="#work" class="btn-primary-custom">
-                    <span>View Projects</span>
-                    <i class="bi bi-arrow-down-short"></i>
-                </a>
-                <a href="#contact" class="btn-secondary-custom">
-                    <span>Get in Touch</span>
-                </a>
-            </div>
-            
-            <div class="hero-meta reveal">
-                <div class="meta-item">
-                    <i class="bi bi-geo-alt"></i>
-                    <span>Lamongan, East Java</span>
+        <div class="row align-items-center min-vh-100 py-5">
+            <!-- Kolom Kiri: Teks -->
+            <div class="col-lg-7">
+                <div class="hero-content">
+                    <div class="hero-badge reveal">
+                        <span class="status-dot"></span>
+                        <span>Available for opportunities</span>
+                    </div>
+                    
+                    <h1 class="hero-title reveal">
+                        Ahmad Alfan Ghofar,<br>
+                        <span class="serif-italic">building</span> digital solutions
+                        <span class="text-accent">through technology</span> & design.
+                    </h1>
+                    
+                    <p class="hero-description reveal">
+                        Fresh graduate in Information Technology with a passion for software development, 
+                        web applications, data processing, and graphic design. Ready to learn, grow, and 
+                        contribute in a professional environment.
+                    </p>
+                    
+                    <div class="hero-actions reveal">
+                        <a href="#work" class="btn-primary-custom">
+                            <span>View Projects</span>
+                            <i class="bi bi-arrow-down-short"></i>
+                        </a>
+                        <a href="#contact" class="btn-secondary-custom">
+                            <span>Get in Touch</span>
+                        </a>
+                    </div>
+                    
+                    <div class="hero-meta reveal">
+                        <div class="meta-item">
+                            <i class="bi bi-geo-alt"></i>
+                            <span>Lamongan, East Java</span>
+                        </div>
+                        <div class="meta-divider"></div>
+                        <div class="meta-item">
+                            <i class="bi bi-mortarboard"></i>
+                            <span>S.Kom. — IT Graduate 2026</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="meta-divider"></div>
-                <div class="meta-item">
-                    <i class="bi bi-mortarboard"></i>
-                    <span>S.Kom. — IT Graduate 2026</span>
+            </div>
+            
+            <!-- Kolom Kanan: Foto Profil -->
+            <div class="col-lg-5 text-center mt-5 mt-lg-0 reveal" style="transition-delay: 0.2s;">
+                <div class="hero-image-wrapper">
+                    <img src="{{ url_for('static', filename='img/foto_alvan.PNG') }}" 
+                         alt="Ahmad Alfan Ghofar" 
+                         class="hero-photo"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    
+                    <!-- Fallback: Muncul jika foto belum ada / error -->
+                    <div class="avatar-placeholder" style="display: none;">
+                        <span class="display-1 fw-bold" style="color: var(--text-subtle);">AAG</span>
+                    </div>
                 </div>
             </div>
         </div>
