@@ -1197,3 +1197,104 @@ body {
     .reveal { opacity: 1; transform: none; }
     html { scroll-behavior: auto; }
 }
+
+/* =========================================
+   PRINT STYLES (Untuk Download PDF)
+   ========================================= */
+@media print {
+    /* 1. Sembunyikan elemen yang tidak perlu di kertas */
+    .navbar, 
+    .scroll-indicator, 
+    #scrollTop, 
+    .theme-toggle, 
+    .hero-actions, 
+    .contact-form-wrapper, 
+    footer,
+    .noise-overlay,
+    .ambient-glow {
+        display: none !important;
+    }
+
+    /* 2. Paksa background putih dan teks hitam agar profesional & hemat tinta */
+    body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-size: 11pt;
+        line-height: 1.5;
+    }
+
+    /* 3. Pastikan elemen tidak terpotong di tengah halaman (page break) */
+    .section, .bento-card, .skill-group, .journey-item, .project-row {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    /* 4. Sesuaikan tampilan judul agar tetap elegan di kertas */
+    .hero {
+        min-height: auto !important;
+        padding: 2rem 0 !important;
+    }
+    
+    .hero-title {
+        font-size: 24pt !important;
+        color: #000000 !important;
+    }
+    
+    .serif-italic, .text-accent {
+        color: #2563eb !important; /* Pertahankan aksen biru */
+    }
+
+    /* 5. Bersihkan link agar tidak ada garis bawah biru */
+    a {
+        color: #000000 !important;
+        text-decoration: none;
+    }
+    
+    /* 6. Hilangkan shadow dan ganti dengan border tipis agar rapi di PDF */
+    .bento-card, .skill-group, .hero-photo, .contact-method {
+        box-shadow: none !important;
+        border: 1px solid #cccccc !important;
+        background: #ffffff !important;
+    }
+
+    /* 7. Pastikan gambar foto profil tercetak */
+    .hero-photo {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
+/* =========================================
+   PRINT STYLES - Untuk Download PDF
+   ========================================= */
+@media print {
+    .navbar, .scroll-indicator, #scrollTop, .theme-toggle, 
+    .hero-actions, .contact-form-wrapper, footer, 
+    .noise-overlay, .ambient-glow, .btn-submit, .btn-cta {
+        display: none !important;
+    }
+    
+    body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    .section, .bento-card, .skill-group, .journey-item, .project-row {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    
+    .hero { min-height: auto !important; padding: 2rem 0 !important; }
+    .hero-title { font-size: 24pt !important; }
+    
+    .bento-card, .skill-group, .hero-photo, .contact-method {
+        box-shadow: none !important;
+        border: 1px solid #cccccc !important;
+        background: #ffffff !important;
+    }
+    
+    a { color: #000000 !important; text-decoration: none; }
+    .serif-italic, .text-accent { color: #2563eb !important; }
+}

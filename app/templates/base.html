@@ -53,10 +53,16 @@
                         </button>
                     </li>
                     <li class="nav-item ms-2 mt-2 mt-lg-0">
-                        <a href="{{ url_for('main.download_cv') }}" class="btn-cta">
-                            <span>Resume</span>
-                            <i class="bi bi-arrow-up-right"></i>
-                        </a>
+                    <button onclick="window.print()" class="btn-cta" style="cursor: pointer; border: none; font-family: inherit;">
+                        <span>Save PDF</span>
+                        <i class="bi bi-arrow-up-right"></i>
+                    </button>
+                    </li>
+                        <li class="nav-item ms-2 mt-2 mt-lg-0">
+                        <button onclick="window.print()" class="btn-cta" style="background: var(--accent); cursor: pointer;">
+                            <span>Download PDF</span>
+                            <i class="bi bi-download"></i>
+                        </button>
                     </li>
                 </ul>
             </div>

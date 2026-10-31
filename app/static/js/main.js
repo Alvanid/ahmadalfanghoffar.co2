@@ -198,3 +198,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 5000);
     });
 });
+
+// Fungsi untuk Download Portofolio sebagai PDF
+function downloadPortfolioPDF() {
+    // Sembunyikan elemen yang tidak perlu saat print
+    const elementsToHide = document.querySelectorAll('.navbar, .scroll-indicator, #scrollTop, .theme-toggle, .hero-actions, .contact-form-wrapper, footer, .noise-overlay, .ambient-glow');
+    
+    // Tampilkan dialog print browser
+    window.print();
+}
